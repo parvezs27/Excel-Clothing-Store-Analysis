@@ -22,7 +22,49 @@ Lets start by checking for blanks, duplicates and inconsistencies within our dat
 
 We will also check the index column to see if the unique row identifiers are in sequential ascending order. To do this, we will use the formula: IF(OR((A2+1=A3),(A2-1=A1)),"Sequential","Not Sequential")
 Basically we are asking Excel to output "Sequential" if the cell above plus 1 equals the cell below, which is the output we want for all cells. If in the case, this condition is not met, Excel will output "Not Sequential". After running the formula, we will go to Data and add a filter to the column, so we can see the distinct values. Here we can only see "Sequential", meaning that the numbers of the column are in sequential order. If there was a "Not Sequential" shown, we would filter to find where this was and correct the issue as need be. 
-![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/78560dec-0b08-478e-a43e-64d011fd9680)
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/95185f25-7e03-4046-a64b-89ac387b51d4)
+
+We will now go column by column checking for any issues, once again, we'll be looking out for any abnormal values, these could be an integer that's much lower or higher than the expected range, a repeat of value but with a spelling error etc.
+
+Order ID: 
+- Contains numeric characters for the order ID in a particular formatting, with 3 numeric characters followed by a dash and 7 numeric characters, followed by a dash and 7 numeric characters again. Upon adding a filter and scanning through the disctinct values in the filter, no issues stood out.
+Customer ID:
+- Contains numeric characters for the customer ID, using the same process of running a filter and scanning through, no issues or abnormalities standout.
+Gender:
+- Already on first glance, we can see that there's "Women", "Men" and "W", indicating that genders have been denoted with both the word and the first letter of the gender. We want to denote using just one method, here we'll denote the genders using the words "Men" and "Women" and replace any "W" and "M" with these. To do that, we will filter for "M" and "W" and run the find and replace function and replace these with the appropriate the gender.
+
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/c6c52777-20c4-42a7-956b-37677bd738ec)
+Before
+
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/a0f7f1e0-30fd-4c4e-915b-776d542e6eed)
+After running find and replace
+
+Age:
+Numeric characters/integers. We will run a filter again and check for any abnormal values. For example, if the value 6 showed, we would know for certain that this is an error because it's extremely unlikely a 6 year old would be able to sign up for a website in the first place, and then place an order. Aditionnally, any age below 18, as 18 years old is usually the minimum age to purchase on websites as making purchases involves entering into a contract, hence the age restriction. Another abnormal value could be over the age of 80, whilst it may be entirely possible someone over the age of 85 made a purchase, the likelhihood is statistically low. The older you get after a certain age, the less likely you are to make an online purchase. Here's a graph showing the distributio nof digital buyers in the United States as of February 2020. https://www.statista.com/statistics/469184/us-digital-buyer-share-age-group/In our dataset the range In our dataset, the age range is 18-78, which seems like a normal age range.
+
+Date:
+The date column is in the correct data type which is "date". Running the filter once again we can see the months from January to December in 2022, no abnormalities can be seen here.
+
+Status:
+Running the filter, we can see "Cancelled", "Delivered", "Refunded" and "Returned", nothing abnormal to be seen here. It will be worth checking in the data dictionary, relevant documentation or with the data engineers/relevant contact person whether orders with delivery on the way need to be included too. 
+
+Channel:
+Running the filter, we can see the list of channels, nothing abnormal noted here.
+
+SKU:
+Running the filter, we can see the SKU ends with the size of the item such as XXL as below. This is something to keep in mind. If we run across a SKU without a size at the end, this may need to be corrected. 
+
+Category and size:
+Running the filter, we can see no abnormalities in these columns.
+
+Quantity:
+Running the filter, we can see numeric values and also text values, such as "1" and "One", "2" and "Two". We will utilise the same process as before and run the find and replace function to replace the text values with numeric values. 
+
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/f07b7fbc-2994-4ff1-bbce-6fa6badbe187)
+Before 
+
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/8a813941-1c97-4dce-90df-11daabe1ece2)
+After running find and replace
 
 
 
