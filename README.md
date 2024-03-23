@@ -66,6 +66,30 @@ Before
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/8a813941-1c97-4dce-90df-11daabe1ece2)
 After running find and replace
 
+Currency:
+Running the filter again, we can see "INR" (Indian Rupees) is the only text value used throughout the column. Since we know our store is in India and accepts payments in INR, this column seems like a waste of space and could be removed, howver, it's important to consult with the relevant stakeholders before doing so. In our analysis we'll leave the column as is. 
+
+Amount:
+Running the filter again, we can see no abnormal values, no values seem very low or very high nor look like they wouldn't fall within the normal range. 
+
+Ship City, Ship State and Ship Postal Code:
+Running filters once again and scanning, we cannot see any abnormalities here. All states are correct names of Indian states. 
+
+Ship Country:
+This is another column which could be deleted to clear space, since we already know that the data is looking at national orders in India only and not international orders.
+
+So here we conclude our data cleaning phase. We will now move onto data processing
+
+## Data Processing
+Here we'll be processing such as calculations, to help us in our analysis further. As an example, we can create age brackets, to help simplify our analysis. We can create groups such as "Young adults", "Adults" and "Seniors". Young adults includes the ages 18 to 25. We have chosen 25 because that is when the brain reaches or almost reaches full devleopment and maturation. From 25 to 60 will be "Adults", we can name it "fully developed adults", but for simplicity lets keep it adults. Then 60+ will be "seniors. Let's call this column "age group" and use the following formula. 
+=IF(F4<=25,"Young Adult",IF(F4<60,"Adult",IF(F4>=60,"Seniors")))
+This formula tells excel to output "Young Adult" if the age value is equal to or below 25, output "Adult" if the age value is below 60 and to output "Seniors" if the age value is above 60. The values have been checked by scanning over the values in the age column and age group column to see if the ages are falling within the correct age bracket. 
+Below is the result of our formula. 
+
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/135be8ce-96f4-45a4-9442-88667d3538df)
+
+
+
 
 
 
