@@ -143,11 +143,29 @@ Here we'll utilise a horizontal bar chart, we can also utilise a pie chart, howe
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/388c9327-1121-433f-b07b-3b435de60482)
 
+5. Which are the top 10 states contributing most to sales?
+
+Here we'll utilise a horizontal bar chart again. It's absolutely fine to use the same type of chart multiple times in a dashboard, as long as you're getting the information across clearly with minimal cognitive load. Horizontal bar charts are one of the best charts when comparing multiple data categories. A few reasons include, the bars are proportional to the values they represent, so the reader can get an idea of whats happening simply by looking at the bar lengths and/or the colours of the bars without having to read much text. Category labels are easier to display before the bars and data labels after the bars. These are one of the most widely used charts for these reasons alone. 
+Here's our chart below after formatting
+
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/90d8c50d-f9c7-4b76-9952-32cb76784985)
+
+6. What is the relationship between age and gender based on number of purchases?
+
+Here we're looking at contribution towards the total number of purchases, segmented by gender and age. We'll utilise a column chart to show the contribution towards sales by each gender in the young adult, adult and senior age groups. Below is our final chart after formatting:
 
 
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/9410bc2a-caf5-4bd4-a005-2e7d647809ec)
 
+7. Which channel is contributing to maximum sales?
 
+   
 
+Once we have created the charts we need, we'll now add slicers, we'l also use the report connections function to connect our slicers/filters with all of the charts.
+
+Insights:
+- There was an increase in sales, peaking in March, with a decline till June, followed by an increase in August and then an overall decline in sales till December. Why was there a increase tilL March? It may have been promotions run by the store, or it may be due to other factors such as festivals happening, March is a major month for festivities in India, this may explain the peak in March. 
+- 
 
 SCRIPT
 - Very first thing you should do is, is create a separate folder and file for your cleaning, never edit the original file given to you, if anything goes wrong and you can't revert back that is an issue. Make sure you make a copy first and work on that. Different companies have different practices of handling datasets, be sure to confirm these beforehand. 
