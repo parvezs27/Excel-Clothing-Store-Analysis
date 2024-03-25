@@ -1,8 +1,6 @@
 # Excel-Clothing-Store-Analysis
 ## Project Information
-Employed as Data Analysts for Modern Traditional Clothing Store in India, who sell womens and mens clothing through various online channels such as Myntra, Ajio and Amazon. Business executives of Modern Traditional Clothing have requested us to create an annual sales report, with the purpose of understanding their customer base and how to grow their sales in 2023. the business is performing, to help them with business decisions. The executives have advised that they currently don't have any dashboards, and haven't exactly specified what they would like us to deliver. No specific guidance has been provided on how to approach the task, what metrics they would like to see or any examples they may have which they wish to recreate. As analysts, it is upto use to understand the business, the business situation, what the stakeholders will need to see and how to best showcase this keeping in mind the target audience. 
-
-Executives have asked us to address the following via our analysis:
+Modern Traditional Clothing Store is an online clothing store based in India, which sells womens and mens clothing through online channels such as Amazon, Myntra and Ajio. The executives of Modern Traditional Clothing Store have requested us, the Data Analysts employed by the store, to create an annual sales report for 2022 in the form of a dashboard using Microsoft Excel. Executives say this report will assist them with understanding their customer base and how to grow their sales in 2023. We have been given 8 questions by the executives (below), which we need to address through our analysis. 
 
 1. Compare the sales and orders using a single chart
 2. Which month had the highest sales and count of orders?
@@ -13,7 +11,11 @@ Executives have asked us to address the following via our analysis:
 7. Which channels are contributing the most to sales?
 8. Highest selling category?
 
-We have been given the dataset in the form of an excel file (link below). We will begin with data cleaning, then move onto processing, analysis and finally dashboard creation.
+The Data Engineers for the store have provided us with the dataset for 2022 in the form of an Excel file, which we'll be using for our analysis.
+
+In this case, we have been given the dataset and the questions we need to answer, however, a lot of the time in the real world this will not be the case. You will be given a business problem and it will be upto you to decide which data you need, where to source the data from e.g. internally from within the company database or from an external source and which questions should be addressed to help solve the business problem. In this case, we haven't been given mock ups or example dashboards, however, the executives have mentioned that we're free to design the dashboard how we would like, as long as the information addresses the questions and is clearly and easily conveyed. 
+
+In this project, we will begin with data cleaning, then move onto data processing and analysis, and finally, dashboard creation.
 
 ## Key points of this project
 - Pie charts have been used, generally pie charts are frowned upon in data analysis, but since no thin slices we can do.
