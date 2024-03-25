@@ -6,11 +6,11 @@ Executives have asked us to address the following via our analysis:
 
 1. Compare the sales and orders using a single chart
 2. Which month had the highest sales and count of orders?
-3. Who purchased more, men or women?
+3. Who generated the most sales, women or men?
 4. What are the different statuses of orders?
 5. Which are the top 10 states contributing most to sales?
 6. What is the relationship between age and gender based on number of purchases?
-7. Which channel is contributing to maximum sales?
+7. Which channels are contributing the most to sales?
 8. Highest selling category?
 
 We have been given the dataset in the form of an excel file (link below). We will begin with data cleaning, then move onto processing, analysis and finally dashboard creation.
@@ -113,6 +113,7 @@ One thing we can also do is, paste the Age Group and Month column as values. Thi
 Let's start by creating a pivot table. Pivot tables are frequently used as they allow large datasets to be summarised quickly and easily. To create a pivot table, go to the insert tab and click pivot table, select your data range, click "add this to data model" (more on this in a bit) and click OK. We'll now utilise our PivotTable fields to create the charts we need to address the questions. 
 
 1. Compare the monthly sales and orders using a single chart
+2. Which month had the highest sales and count of orders?
 
 Here we'll drag our month, amount and order id fields in the appropriate areas and turn off the grand totals. Here's how things are looking like so far. 
 
@@ -131,7 +132,7 @@ Now we'll create a chart using the PivotChart function. Since we have two measur
 - Formatted the Y axis for Sales and used the Format Code 0.00,, "M", this is to remove lengthy numbers and make the values easier to read, whilst decluttering the chart.
 - Gave the chart a title so the read knows what information the chart is displaying.
 
-3. Who purchased more, men or women?
+3. Who generated the most sales, men or women?
 
 Here we can utilise a couple of different charts, we can use a bar chart as before, with horizontal or vertical bars. Or, we can use a pie chart. Generally, pie charts are frowned upon and not considered best practice, as it can be difficult to intepret the values of the slices in comparison to other slices of the pie when you've got multiple thin slices. However, to provide the audience with a quick, general sense of the part to whole relationship of your data, where you don't have many precise slices, pie charts a good option. Since we only have men and women we are comparing, we'll utilise a pie chart. Below is our final chart. 
 
@@ -158,6 +159,10 @@ Here we're looking at contribution towards the total number of purchases, segmen
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/9410bc2a-caf5-4bd4-a005-2e7d647809ec)
 
 7. Which channel is contributing to maximum sales?
+
+Here we'll create another horizontal bar chart to compare the different channels on sales. Below is our final chart after formatting:
+
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/edbe927d-b67d-4a7e-a5d0-2ad5e771f733)
 
    
 
