@@ -126,12 +126,11 @@ We will be using Pivot tables for our analysis. Pivot tables are frequently used
 1. Compare the monthly sales and orders using a single chart
 2. Which month had the highest sales and count of orders?
 
-We'll start by dragging our month, amount and order id fields in the appropriate areas and turn off the grand totals, as below.
+We'll start by dragging our month, amount and order ID fields in the appropriate rows and value fields and turn off the grand totals, as below.
 
-![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/93b04b75-2118-44bf-a4da-e41cca39af0a)
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/509944ae-ef88-408b-8cc7-f0e31591700f)
 
-
-We can see the amount of sales per month and the number of order id's which Excel has counted per month, but this number of order id's does not equate to the number of unique orders per month. Due to the structure of our data, Excel count's every time an Order ID is mentioned in the dataset, so if an order ID is mentioned 3 times, it will be counted as 3 different orders. Due to this instead of Count, we have to use count distinct, which will only count each order ID once. This was why we selected the "add this to data model" option, which allows us to use the count distint function. Below are the results after running the count distinct function. We can see the difference is more than 200 for the month of January, this is why have to be careful and make sure we're using the correct count function.
+We can see the amount of sales and the number of order ID's per month which Excel has counted, however, this count of order ID's does not equate to the count of unique orders per month. Due to the structure of our data, Excel count's every time an Order ID is mentioned in the dataset, so if an order ID is mentioned 3 times, it will be counted as 3 different orders. Due to this we have to use count distinct, which will only count each order ID once. This was why we selected the "add this to data model" option, which allows us to use the count distinct function. Below are the results after running the count distinct function. We can see the difference is more than 200 for the month of January, this is why we have to be careful and make sure we're using the correct count function.
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/12460746-d82f-4d63-bb44-89da9d263775)
 
@@ -139,7 +138,8 @@ Now we'll create a single chart which visualises monthly sales and orders using 
 
 Heres's what our final chart looks like:
 
-![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/1aa784d6-9edd-4ca7-88fc-a32b96cb6eaf)
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/eff02cc0-3ce1-43a7-b217-e6cfee979846)
+
 
 
 
