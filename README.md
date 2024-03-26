@@ -25,6 +25,11 @@ Upon opening the dataset, we can see certain columns providing demographic data 
 
 From this data, we can already see that we have the information to help us understand the stores customer base. Having demographic, geographic, behavioural and psychographic data can help with customer profiling and in gaining a deeper understanding of the customer. This information can then be used to drive business decisions such as marketing based decisions e.g. how to market to each segement of the customer base, how much to market and inventory based decisions e.g. which products should be stocked more or less.
 
+Here's a snapshot of our data:
+
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/4bcad4ff-da8d-4333-a7fe-e023a161876f)
+
+
 Lets move onto data cleaning to make sure the data is in good shape before analysis.
 
 ## Data Cleaning and Preparation
@@ -32,11 +37,15 @@ Data cleaning is a **crucial** process, as we want our data to be in the best po
 
 Lets start by checking for blanks, duplicates and inconsistencies within our data. To check for blanks/nulls in our dataset, we will highlight all the data by pressing Ctrl+A or double clicking the triangle on the left corner next to column A, then we'll utilise the go to special function by pressing F5, click "blanks", OK and Excel will begin scanning the dataset. We've received a "no cells were found" from Excel, which means there are no nulls in our dataset. 
 
-If in the case we did get nulls, we would have to figure how to handle these nulls. Sometimes it's just a matter of looking at the data surrounding it and filling in the null. For example, you may have a customer who's purchased two items, these will be shown in two rows, each with an order ID and customer ID value. Lets say the order ID was missing for one of the rows, by looking at the other row and seeing that the Order ID is the same, then it's clear that the customer ID will be the same too. In other cases, you may have to decide whether to use the mean, median, mode or another imputation method for handling null values. This entirely depends on the data and context, but generally, the mean is the most common method for imputation of numeric data, but if there are outliers it won't be the best option as outliers can heavily skew the mean in either direction. Where there are outliers, the median is a better option. The mode is more appropriate for categorical data and represents the most common category. These are not the only imputation methods, other methods include forward and backward fill for time series data and interpolation such as linear interpolation. It's impportant to liase with stakeholders such as our managers and/or executives before using any of these methods, so we can make sure we are handling these values in alignment with preferred company practices. 
+If in the case we did get nulls, we would have to figure how to handle these nulls. Sometimes it's just a matter of looking at the data surrounding it and filling in the null. For example, you may have a customer who's purchased two items, these will be shown in two rows, each with an order ID and customer ID value. Lets say the order ID was missing for one of the rows, by looking at the other row and seeing that the order ID is the same, then it'll be clear that the customer ID will be the same too. In other cases, you may have to decide whether to use the mean, median, mode or another imputation method for handling null values. This entirely depends on the data and context, but generally, the mean is the most common method for imputation of numeric data. However if there are outliers the mean can be heavily skewed in either direction. Where there are outliers, the median is a better option. The mode is more appropriate for categorical data and represents the most common category. These are not the only imputation methods, other methods include forward and backward fill for time series data and interpolation such as linear interpolation. It's important to liase with stakeholders such as our managers and/or executives before using any of these methods, so we can make sure we are handling these values in alignment with preferred company practices. 
 
-We'll also have a look at our index column to see if the unique row identifiers are in sequential ascending order. To do this, we will use the formula: IF(OR((A2+1=A3),(A2-1=A1)),"Sequential","Not Sequential")
-Here we're asking Excel to output "Sequential" if a cell plus 1, equals the the value of the cell below. If this condition is not met, Excel will output "Not Sequential". After running the formula, we will go to Data and add a filter to the column, so we can see the distinct values. Here we can only see "Sequential", meaning that the values of the column are in ascending sequential order. If there was a "Not Sequential" shown, we would use the filter to find where this occurred and correct the issue. It's important we correct any errors with a primary key column as these keys are used to connect tables with one another. 
+Moving along, we'll also have a look at our index column to see if the unique row identifiers are in sequential ascending order. To do this, we will use the formula: 
+
+IF(OR((A2+1=A3),(A2-1=A1)),"Sequential","Not Sequential")
+
+Here we're asking Excel to output "Sequential" if a cell plus 1, equals the the value of the cell below. If this condition is not met, Excel will output "Not Sequential". After running the formula, we will go to Data and add a filter to the column, so we can see the distinct values in the column. Here we can only see "Sequential", meaning that the values of the column are in ascending sequential order. If there was a "Not Sequential" shown, we would use the filter to find where this occurred and correct the issue. It's important we correct any errors with a key column as these key column are used to connect tables with one another. 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/95185f25-7e03-4046-a64b-89ac387b51d4)
+Checking index column
 
 We will now go column by column checking for any issues. 
 
