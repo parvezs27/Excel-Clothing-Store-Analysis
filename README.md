@@ -112,44 +112,41 @@ This formula instructs excel to extract the numeric value of the month from the 
 One thing we can also do, is to paste the Age Group and Month column as values. This way you remove the formulas from the sheet and improve processing speed. The formula's however will be documented in our documentation for this project, a long with all the other functions we use so we have a written record. 
 
 ## Data Analysis
-We will be using Pivot tables for our analysis. Pivot tables are frequently used in Excel based analyses as they allow large datasets to be summarised quickly and easily. To create a pivot table, we will go to the insert tab and click pivot table, select your data range, click "add this to data model" (more on this in a bit) and click OK. We'll now utilise our PivotTable fields to create the charts we need to address the questions. 
+We will be using Pivot tables for our analysis. Pivot tables are frequently used in Excel based analyses as they allow large datasets to be summarised quickly and easily. To create a pivot table, we will go to the insert tab and click pivot table, select the data range, click "add this to data model" (more on this in a bit) and click OK. We'll now utilise our PivotTable fields to create the charts we need to address the questions. 
 
 1. Compare the monthly sales and orders using a single chart
 2. Which month had the highest sales and count of orders?
 
-Here we'll drag our month, amount and order id fields in the appropriate areas and turn off the grand totals. Here's how things are looking like so far. 
+We'll start by dragging our month, amount and order id fields in the appropriate areas and turn off the grand totals, as below.
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/6a35afa1-fb7c-4fce-9a61-cdcc26f1285e)
 
-We can see the amount of sales per month and the number of order Id's per month, but this does not equate to the number of unique orders per month. Due to the structure of our data, instead of Count, we have to use count distinct, which will only include an order ID once in the count. This is why we selected the "add this to data model" option, so we get the option to use count distinct. Below are the results after running count distinct. For January, the difference is more than 200, this is why have to be careful and make sure we're using the correct count function.
+We can see the amount of sales per month and the number of order id's which Excel has counted per month, but this number of order id's does not equate to the number of unique orders per month. Due to the structure of our data, Excel count's every time an Order ID is mentioned in the dataset, so if an order ID is mentioned 3 times, it will be counted as 3 different orders. Due to this instead of Count, we have to use count distinct, which will only count each order ID once. This was why we selected the "add this to data model" option, which allows us to use the count distint function. Below are the results after running the count distinct function. We can see the difference is more than 200 for the month of January, this is why have to be careful and make sure we're using the correct count function.
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/12460746-d82f-4d63-bb44-89da9d263775)
 
-Now we'll create a chart using the PivotChart function. Since we have two measures, with the count of order ID's in the thousands and the sum of amounts into the millions, we'll need to create a dual axis. We'll also do our formatting and explain why we chose to do certain formatting steps. Heres's what our final chart looks like:
+Now we'll create a single chart which visualises monthly sales and orders using the PivotChart function. Since we have two measures, with the count of order ID's in the thousands and the sum of amounts into the millions, we'll need to create a dual axis chart. We'll also do our formatting and explain why we chose to do certain formatting steps. 
 
-![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/673797ca-db61-4f90-97e4-4f3df1a7fd5f)
+Heres's what our final chart looks like:
 
-
-- Removed grid lines to improve clarity and decluttering
-- Formatted the Y axis for Sales and used the Format Code 0.00,, "M", this is to remove lengthy numbers and make the values easier to read, whilst decluttering the chart.
-- Gave the chart a title so the read knows what information the chart is displaying.
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/55364d3d-fc6f-41ea-9b97-48022613e341)
 
 3. Who generated the most sales, men or women?
 
-Here we can utilise a couple of different charts, we can use a bar chart as before, with horizontal or vertical bars. Or, we can use a pie chart. Generally, pie charts are frowned upon and not considered best practice, as it can be difficult to intepret the values of the slices in comparison to other slices of the pie when you've got multiple thin slices. However, to provide the audience with a quick, general sense of the part to whole relationship of your data, where you don't have many precise slices, pie charts a good option. Since we only have men and women we are comparing, we'll utilise a pie chart. Below is our final chart. 
+Here we can utilise a couple of different charts, we can use a bar chart as before, with horizontal or vertical bars. Or, we can use a pie chart. Generally, pie charts are frowned upon and not considered best practice, as it can be difficult to intepret and distinguish the difference between similar sized slices. However, to provide the audience with a quick general sense of the part to whole relationship of your data where you don't have many precise slices, pie charts are a good option. Since we only have men and women we are comparing, we'll utilise a pie chart. Below is our final chart. 
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/d934d65b-db1b-4e22-8eea-a71c9a5ea30a)
 
 4. What are the different statuses of orders?
 
-Here we'll utilise a horizontal bar chart, we can also utilise a pie chart, however, the difference in some of the statuses are 1%, which will give us thin slices cluttered together, a bar chart will separate these out in a easy to interpret manner. Since we want to see the percent of grand total, we have to go to valaue field settings and change "choose values as" to % of grand total. Below is our final chart.
+For this question we will use a horizontal bar chart, we can also utilise a pie chart, however, the difference in some of the statuses are 1%, which will give us thin slices cluttered together, a bar chart will separate these out in a easy to interpret manner. Since we want to see the percent of grand total, we have to go to value field settings and change "choose values as" to % of grand total. Below is our final chart.
 
-![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/388c9327-1121-433f-b07b-3b435de60482)
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/322ae808-05b0-45fd-9b7d-8562ba24e3af)
 
 5. Which are the top 10 states contributing most to sales?
 
-Here we'll utilise a horizontal bar chart again. It's absolutely fine to use the same type of chart multiple times in a dashboard, as long as you're getting the information across clearly with minimal cognitive load. Horizontal bar charts are one of the best charts when comparing multiple data categories. A few reasons include, the bars are proportional to the values they represent, so the reader can get an idea of whats happening simply by looking at the bar lengths and/or the colours of the bars without having to read much text. Category labels are easier to display before the bars and data labels after the bars. These are one of the most widely used charts for these reasons alone. 
-Here's our chart below after formatting
+Here we'll use a horizontal bar chart again. Horizontal bar charts are one of the best charts when comparing multiple data categories. A few reasons include, the bars are proportional to the values they represent, so the reader can get an idea of whats happening simply by looking at the bar lengths and/or the colours of the bars without having to read much text. Category labels are easier to display before the bars and data labels after the bars. These reasons alone make horizontal bar charts one of the most used charts in visualisation. 
+Here's our chart below after doing all the formatting:
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/90d8c50d-f9c7-4b76-9952-32cb76784985)
 
@@ -157,18 +154,37 @@ Here's our chart below after formatting
 
 Here we're looking at contribution towards the total number of purchases, segmented by gender and age. We'll utilise a column chart to show the contribution towards sales by each gender in the young adult, adult and senior age groups. Below is our final chart after formatting:
 
-
-![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/9410bc2a-caf5-4bd4-a005-2e7d647809ec)
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/0f00967e-35b5-4498-9aaa-493f86cffa64)
 
 7. Which channel is contributing to maximum sales?
 
 Here we'll create another horizontal bar chart to compare the different channels on sales. Below is our final chart after formatting:
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/edbe927d-b67d-4a7e-a5d0-2ad5e771f733)
-
    
+Now that the charts have been created, we'll arrange these charts onto one dashboard and add slicers. The "report connections" function will be used to connect our slicers with all of the charts. After doing our formatting, here's what our final dashboard looks like. 
 
-Once we have created the charts we need, we'll now add slicers, we'l also use the report connections function to connect our slicers/filters with all of the charts.
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/ef27e913-fce3-4f75-a3a2-9d3018f5de7c)
+
+## Insights
+
+Lets answer our questions one by one and look into other insights.
+
+1. Compare the sales and orders using a single chart
+2. Which month had the highest sales and count of orders?
+
+The highest amount of sales and orders occured in March, with the lowest occuring in November to December. Orders and sales generally seem to be correlated, with orders increasing as sales increase and decreasing as sales decrease. There's a continuing rise in sales from January to March, which may be due to several reasons such as seasonal trends,  sales/promotions run by the store and/or festive season. The month of March comprises of many nationwide festivals in India, which may explain why March generated the most sales and orders. There is a decline in sales and orders from April to June, with an increase in July and August, followed by a decline till December. It's important to understand as Analysts whether this is a yearly pattern and these fluctuations are seasonal fluctuations, or if there's other factors contrbuting here. Why are sales rising from Janaury to March and on a general decline from April to December? Is it increased competition? Is it product quality and negative reviews? Is it the weather? Is it due to social and political events or issues? All this is important to understand so we can understand what is happening in the business, why it could be happening and how we can help the business improve taking into account all the surrounding factors. 
+
+3. Who generated the most sales, women or men?
+6. What is the relationship between age and gender based on number of purchases?
+
+Overall across all age groups, 64% of total sales were generated by women, whilst the remaining 36% were generated by men. Drilling down into the age groups, we can see that women across all age groups generated twice as many orders as men did. Adults contributed the most to total orders, followed by young adults and lastly seniors. 
+
+4. What are the different statuses of orders?
+
+The vast majority of orders being 92.6% were delivered with a very small number which were returned, cancelled or refunded. According to [Spotify](https://www.shopify.com/au/enterprise/blog/ecommerce-returns#:~:text=The%20average%20return%20rate%20for%20ecommerce%20is%20typically%2020%25%20to,product%20and%20its%20online%20description.)
+
+Dashboard Tip of the Week: Keep your documentation outside of your dashboard and do not embed documentation within dashboards. 1. Embedded documentation isn't searchable, which means your stakeholders and co-workers can't find where metrics are used across your organization, 2. Embedded plus listing external is a duplication of work, leading to multiple sources of truth, 3. You have to edit the dashboard and republish, just to update  documentation, 4. It's frequently a bad UI/UX experience for end-users, and 5. Restrictions for anyone to update, plus overhead and time to update will prevent anyone from ever wanting to update documentation.
 
 Insights:
 - There was an increase in sales, peaking in March, with a decline till June, followed by an increase in August and then an overall decline in sales till December. Why was there a increase tilL March? It may have been promotions run by the store, or it may be due to other factors such as festivals happening, March is a major month for festivities in India, this may explain the peak in March. 
@@ -178,8 +194,12 @@ SCRIPT
 - Very first thing you should do is, is create a separate folder and file for your cleaning, never edit the original file given to you, if anything goes wrong and you can't revert back that is an issue. Make sure you make a copy first and work on that. Different companies have different practices of handling datasets, be sure to confirm these beforehand. 
 -  Data here for a store, what you want to do is have a look at any data documentation provided to you to get a better understanding of the data in the columns. So for example, the different categories there should be. You can go to data tab select filter and see if the cateogries match with the documentation, same with other columns such as channel. Documentation is usually a data dictionnary whci hcontains information of the data tpe, the format of the data, a description of the data in the column and examples of what data should look like.
 - We can check to see if our index column is in the correct sequence
+- 
 
 
 DASHBOARD
 - Use sparing colours, follow gestalt principles of design, white space, use colors sparingly
 - average delivery time to see whwere we can improve
+- - Removed grid lines to improve clarity and decluttering
+- Formatted the Y axis for Sales and used the Format Code 0.00,, "M", this is to remove lengthy numbers and make the values easier to read, whilst decluttering the chart.
+- Gave the chart a title so the read knows what information the chart is displaying.
