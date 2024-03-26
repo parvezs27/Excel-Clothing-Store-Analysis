@@ -50,7 +50,7 @@ Checking index column
 We will now go column by column checking for any issues. 
 
 Order ID and Customer ID:
-The Order ID column contains numeric characters in a particular format, with 3 numeric characters followed by a dash and 7 numeric characters, followed by a dash and 7 numeric characters again. Upon adding a filter and scanning through the disctinct values in the filter, all the Order Id's seem to follow the same formatting with nothing abnormal standing Similarly with the customer ID column, using the same process of running a filter and scanning through, no issues or abnormalities standout.
+The Order ID column contains numeric characters in a particular format, with 3 numeric characters followed by a dash and 7 numeric characters, followed by a dash and 7 numeric characters again. Upon adding a filter and scanning through the disctinct values in the filter, all the order ID's seem to follow the same formatting with no abnormalities sticking out. Similarly with the customer ID column, using the same process of running a filter and scanning through, no issues or abnormalities standout.
 
 Gender:
 Already on first glance, we can see that there's "Women", "Men" and "W", indicating that genders have been denoted with both the word and the first letter of the word for the gender. We want to denote using just one method, here we'll denote the genders using the words "Men" and "Women" and replace any "W" and "M" with these. To do that, we will filter for "M" and "W" and run the find and replace function and replace these with the appropriate the gender.
@@ -62,26 +62,25 @@ Before
 After running find and replace
 
 Age:
-We will run a filter again and check for any abnormal values in the age column. As an example, if the value 6 was found, we would know for certain that this is an error because it's extremely unlikely a 6 year old would be able to sign up for a website in the first place, and then place an order. 18 years old is usually the minimum age to purchase on websites as making purchases involves entering into a contract. Another abnormal value could be over the age of 80, whilst it may be entirely possible for someone over the age of 85 to make a purchase, the likelhihood is statistically low. The older you get after a certain age, the less likely you are to make an online purchase. Here's a graph showing the distributio nof digital buyers in the United States as of February 2020. https://www.statista.com/statistics/469184/us-digital-buyer-share-age-group/
-In our dataset the age range is 18-78, which seems like a normal range. 
+Using the filter, we will check for any abnormal values in the age column. As an example, if the value 6 was found, we would know for certain that this is an abnormal vlaue because it's extremely unlikely a 6 year old would be able to sign up for a website in the first place, and then place an order. 18 years of age is the minimum age to purchase on websites as one is entering into a contract. Another abnormal value could be over the age of 90, whilst it may be entirely possible for someone over the age of 90 to make a purchase, the likelhihood is statistically low. The older you get after a certain age, the less likely you are to make an online purchase. [Here](https://www.statista.com/statistics/469184/us-digital-buyer-share-age-group/) is a graph showing the distribution of digital buyers in the United States as of February 2020, showcasing the decreasing number of buyers with age. In our dataset the age range is 18-78, which can be said is a normal range.
 
 Date:
-The date column is in the correct data type which is "date". Running the filter once again we can see the months from January to December in 2022, no abnormalities can be seen here.
+The date column is in the correct data type which is "date". Running through the filter, we can see the months from January to December in 2022, with no misspelled repeats or any other abnormalities. 
 
 Status:
-Running through the filter again, we can see "Cancelled", "Delivered", "Refunded" and "Returned", nothing abnormal to be seen here.
+Using our filter, we can see "Cancelled", "Delivered", "Refunded" and "Returned", nothing abnormal to be seen here.
 
 Channel:
-Running the filter, we can see the list of channels, nothing abnormal noted here.
+Using our filter, we can see the list of channels, nothing abnormal noted here.
 
 SKU:
-Running the filter, we can see the SKU ends with the size of the item such as XXL. This is something we should keep in mind. If we run across a SKU without a size at the end, this may need to be corrected. 
+Using our filter,, we can see the SKU ends with the size of the item such as XXL. This is something we should keep in mind. If we run across a SKU without a size at the end, this may need to be corrected. 
 
 Category and size:
-Running the filter, we can see no abnormalities in these columns.
+Using the filter, we can see no abnormalities in these columns.
 
 Quantity:
-Running the filter, we can see numeric values and also text values, such as "1" and "One", "2" and "Two". We will utilise the same process as we did previously with the gender column and run the find and replace function to replace the text values with numeric values. 
+Using the filter, we can see numeric values and also text values, such as "1" and "One", "2" and "Two". We will utilise the same process as we did previously with the gender column and run the find and replace function to replace the text values with numeric values. 
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/f07b7fbc-2994-4ff1-bbce-6fa6badbe187)
 Before 
@@ -90,13 +89,13 @@ Before
 After running find and replace
 
 Currency:
-Running the filter again, we can see "INR" (Indian Rupees) is the only text value used throughout the column. Since we already know our store is in India and accepts payments in INR, this column seems like an unncessary use of space and could be removed. However, it's important to consult with the relevant stakeholders before doing so. In our analysis we'll leave the column as is. 
+Using the filter, we can see "INR" (Indian Rupees) is the only text value used throughout the column. Since we already know our store is in India and accepts payments in INR, this column seems like an unncessary use of space and could be removed. However, it's important to consult with the relevant stakeholders before doing so. In our analysis we'll leave the column as is. 
 
 Amount:
-Running the filter again, we can see no abnormal values. No values seem very low or very high nor look like they wouldn't fall within the normal range. It would be useful to have a list of the item prices which we can refer to and see the item price range. If a value was to fall outside this range, we know there is an error somewhere. 
+Using the filter, we can see no abnormal values. No values seem very low or very high nor look like they wouldn't fall within the normal range. It would be useful to have a list of the item prices which we can refer to and see the item price range. If a value was to fall outside this range, we know there would be an error somewhere. 
 
 Ship City, Ship State and Ship Postal Code:
-Running filters once again and scanning, we cannot see any abnormalities here. All states are correct names of Indian states. 
+Using the filter, we cannot see any abnormalities in these columns.
 
 Ship Country:
 This is another column which could be deleted to clear space, since we already know that the data is looking at national orders in India only and not international orders.
@@ -115,11 +114,11 @@ Now we'll extract the Month from the Date column, so we can answer question 2 wh
 
 =TEXT(F2,"mmm")
 
-This formula instructs excel to extract the numeric value of the month from the cell F2 into text form. Using "mmm" will result in "Dec and using "mmmm" will give you December. Below is the result of our formula:
+This formula instructs excel to extract the numeric value of the month from the cell F2 into text form. Using "mmm" will result in "Dec" and using "mmmm" will give you the full form as "December". Below is the result of our formula:
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/f424bef8-867b-48b2-b742-1d384cef0809)
 
-One thing we can also do, is to paste the Age Group and Month column as values. This way you remove the formulas from the sheet and improve processing speed. The formula's however will be documented in our documentation for this project, a long with all the other functions we use so we have a written record. 
+One thing we can also do, is to paste the columns with formula's such as Age Group and Month as values. This way you remove the formulas from the sheet and improve processing speed. The formulas will be in our documentation for this project so we can safely remove them from the sheet if we desire to.
 
 ## Data Analysis
 We will be using Pivot tables for our analysis. Pivot tables are frequently used in Excel based analyses as they allow large datasets to be summarised quickly and easily. To create a pivot table, we will go to the insert tab and click pivot table, select the data range, click "add this to data model" (more on this in a bit) and click OK. We'll now utilise our PivotTable fields to create the charts we need to address the questions. 
@@ -129,7 +128,8 @@ We will be using Pivot tables for our analysis. Pivot tables are frequently used
 
 We'll start by dragging our month, amount and order id fields in the appropriate areas and turn off the grand totals, as below.
 
-![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/6a35afa1-fb7c-4fce-9a61-cdcc26f1285e)
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/93b04b75-2118-44bf-a4da-e41cca39af0a)
+
 
 We can see the amount of sales per month and the number of order id's which Excel has counted per month, but this number of order id's does not equate to the number of unique orders per month. Due to the structure of our data, Excel count's every time an Order ID is mentioned in the dataset, so if an order ID is mentioned 3 times, it will be counted as 3 different orders. Due to this instead of Count, we have to use count distinct, which will only count each order ID once. This was why we selected the "add this to data model" option, which allows us to use the count distint function. Below are the results after running the count distinct function. We can see the difference is more than 200 for the month of January, this is why have to be careful and make sure we're using the correct count function.
 
