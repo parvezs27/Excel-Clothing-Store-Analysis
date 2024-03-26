@@ -128,7 +128,9 @@ Now we'll create a single chart which visualises monthly sales and orders using 
 
 Heres's what our final chart looks like:
 
-![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/55364d3d-fc6f-41ea-9b97-48022613e341)
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/1aa784d6-9edd-4ca7-88fc-a32b96cb6eaf)
+
+
 
 3. Who generated the most sales, men or women?
 
@@ -194,27 +196,15 @@ Amazon, Myntra and Flipkart are contributing to sales by a much greater margin c
 All in all, from our analysis, the key things we have learned are:
 - Women across all age groups purchase more than men
 - Maharashtra, Karnataka and Uttar Pradesh are the top 3 states by sales
-- Adults 25 to 59 purchase more than other age groups
-- Amazon, Flipkat and Myntra are the top 3 sales channels
+- Adults aged 25 to 59 purchase more than other age groups
+- Amazon, Flipkart and Myntra are the top 3 sales channels
 - Sales and orders continually rise from January to March
 
+From these insights, a recommendation we can provide to executives would be to market towards women, particularly those in the 25 to 59 age group located in Maharashtra, Karnataka and Uttar Pradesh, through the top sales channels like Amazon, Flipkart and Myntra.
 
-Dashboard Tip of the Week: Keep your documentation outside of your dashboard and do not embed documentation within dashboards. 1. Embedded documentation isn't searchable, which means your stakeholders and co-workers can't find where metrics are used across your organization, 2. Embedded plus listing external is a duplication of work, leading to multiple sources of truth, 3. You have to edit the dashboard and republish, just to update  documentation, 4. It's frequently a bad UI/UX experience for end-users, and 5. Restrictions for anyone to update, plus overhead and time to update will prevent anyone from ever wanting to update documentation.
+## Visualisation Practices
 
-Insights:
-- There was an increase in sales, peaking in March, with a decline till June, followed by an increase in August and then an overall decline in sales till December. Why was there a increase tilL March? It may have been promotions run by the store, or it may be due to other factors such as festivals happening, March is a major month for festivities in India, this may explain the peak in March. 
-- 
+In this section I wanted to share some of the best practices I adopted during the visualisation design:
 
-SCRIPT
-- Very first thing you should do is, is create a separate folder and file for your cleaning, never edit the original file given to you, if anything goes wrong and you can't revert back that is an issue. Make sure you make a copy first and work on that. Different companies have different practices of handling datasets, be sure to confirm these beforehand. 
--  Data here for a store, what you want to do is have a look at any data documentation provided to you to get a better understanding of the data in the columns. So for example, the different categories there should be. You can go to data tab select filter and see if the cateogries match with the documentation, same with other columns such as channel. Documentation is usually a data dictionnary whci hcontains information of the data tpe, the format of the data, a description of the data in the column and examples of what data should look like.
-- We can check to see if our index column is in the correct sequence
-- 
-
-
-DASHBOARD
-- Use sparing colours, follow gestalt principles of design, white space, use colors sparingly
-- average delivery time to see whwere we can improve
-- - Removed grid lines to improve clarity and decluttering
-- Formatted the Y axis for Sales and used the Format Code 0.00,, "M", this is to remove lengthy numbers and make the values easier to read, whilst decluttering the chart.
-- Gave the chart a title so the read knows what information the chart is displaying.
+- Keeping docoumentation outside of the dashboard and not embedding it within the dashboard. Whether it's Tableau, Excel or Power BI, many times you will see the dashboard documentation such as the data source embedded within the dashboard. This is not a best practice due to several reasons. Firstly, embedded documentation is not searchable. If we were looking for specific metrics or information, we'd have to click through each dashboard to find what we're looking for. Having the dashboard information and metrics in separate documentation makes it much easier to find the information you're after. Secondly, everytime you need to edit embedded documentation, you will have to edit the dashboard and re-publish it, increasing the likelihood of encountering bugs or glitches. Finally, embedded documentation is not part of an optimal UI/UX experience for the end user. We want to try our best to de-clutter dashboards to reduce cognitive load on the end user.
+- Decluttering techniques using design principles with an understanding of pre-attentive attributes, gastalt principles and principles of design. [This](https://womenwhocode.com/blog/talks-tech-42-principles-of-good-data-visualization) is a fantastic article explaining the design principles mentioned. However to explain briefly, attributes of a visualisation such as colours (number of colours, intensity) white space, shapes and proximity of objects are all important factors to a visualisation. Understanding how to use these correctly will ensure visualisations are clean, de-cluttered and reduce cognitive load on the end user. In our dashboard, I have used colours sparingly with less intensity. Using too much colour with too much brightness is can be over stimulating. Colours have been associated with genders across two of the charts, with orange referring to women and blue referring to men. If I were to add another chart involving gender with the same colour, the end user would not need to read the legend, they would already know which colours are associated with which gender. Alignment and whitespace, there is equal alignment between all tiles/charts and all charts are the same size, this is to maintain consistency, as anything that pops out and isn't consistent with everything else can be distracting. If one of the tiles was bigger than the other, this would stand out and act as a distraction. All gridlines have also been removed from the charts.
