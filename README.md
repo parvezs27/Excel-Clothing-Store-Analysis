@@ -165,7 +165,8 @@ Here we'll create another horizontal bar chart to compare the different channels
    
 Now that the charts have been created, we'll arrange these charts onto one dashboard and add slicers. The "report connections" function will be used to connect our slicers with all of the charts. After doing our formatting, here's what our final dashboard looks like. 
 
-![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/ef27e913-fce3-4f75-a3a2-9d3018f5de7c)
+![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/3fd0de1f-d1a9-43cb-8d42-2d0ea6eb07e1)
+
 
 ## Insights
 
