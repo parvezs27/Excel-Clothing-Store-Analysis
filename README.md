@@ -134,14 +134,11 @@ We can see the amount of sales and the number of order ID's per month which Exce
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/12460746-d82f-4d63-bb44-89da9d263775)
 
-Now we'll create a single chart which visualises monthly sales and orders using the PivotChart function. Since we have two measures, with the count of order ID's in the thousands and the sum of amounts into the millions, we'll need to create a dual axis chart. We'll also do our formatting and explain why we chose to do certain formatting steps. 
+Now we'll create a single chart which visualises monthly sales and orders using the PivotChart function. Since we have two measures, with the count of order ID's in the thousands and the sum of amounts into the millions, we'll need to create a dual axis chart.
 
-Heres's what our final chart looks like:
+Heres's what our final chart looks like after formatting:
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/eff02cc0-3ce1-43a7-b217-e6cfee979846)
-
-
-
 
 3. Who generated the most sales, men or women?
 
@@ -151,20 +148,20 @@ Here we can utilise a couple of different charts, we can use a bar chart as befo
 
 4. What are the different statuses of orders?
 
-For this question we will use a horizontal bar chart, we can also utilise a pie chart, however, the difference in some of the statuses are 1%, which will give us thin slices cluttered together, a bar chart will separate these out in a easy to interpret manner. Since we want to see the percent of grand total, we have to go to value field settings and change "choose values as" to % of grand total. Below is our final chart.
+For this question we will use a horizontal bar chart, we can also utilise a pie chart, however, the difference in some of the statuses are 1%, which will give us thin slices cluttered together, a bar chart will separate these out in a easy to interpret manner. Since we want to see the percent of the grand total, we have to go to value field settings and change "choose values as" to % of grand total. Below is our final chart.
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/322ae808-05b0-45fd-9b7d-8562ba24e3af)
 
 5. Which are the top 10 states contributing most to sales?
 
-Here we'll use a horizontal bar chart again. Horizontal bar charts are one of the best charts when comparing multiple data categories. A few reasons include, the bars are proportional to the values they represent, so the reader can get an idea of whats happening simply by looking at the bar lengths and/or the colours of the bars without having to read much text. Category labels are easier to display before the bars and data labels after the bars. These reasons alone make horizontal bar charts one of the most used charts in visualisation. 
-Here's our chart below after doing all the formatting:
+Here we'll use a horizontal bar chart again. Horizontal bar charts are one of the best charts when comparing multiple data categories. One reason is that the bars are proportional to the values they represent, which gives a clear indication of what's happening almost instantly to the audience. Another reason is that labels are easier to display, these include category labels before the bars and data labels after the bars. These reasons alone make horizontal bar charts one of the most used charts in visualisation. 
+Here's our chart below after doing our formatting:
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/90d8c50d-f9c7-4b76-9952-32cb76784985)
 
 6. What is the relationship between age and gender based on number of purchases?
 
-Here we're looking at contribution towards the total number of purchases, segmented by gender and age. We'll utilise a column chart to show the contribution towards sales by each gender in the young adult, adult and senior age groups. Below is our final chart after formatting:
+Here we're looking at the contribution towards the total number of purchases, segmented by gender and age. We'll utilise a column chart to show the contribution towards sales by each gender in the young adult, adult and senior age groups. Below is our final chart after formatting:
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/0f00967e-35b5-4498-9aaa-493f86cffa64)
 
@@ -174,19 +171,18 @@ Here we'll create another horizontal bar chart to compare the different channels
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/edbe927d-b67d-4a7e-a5d0-2ad5e771f733)
    
-Now that the charts have been created, we'll arrange these charts onto one dashboard and add slicers. The "report connections" function will be used to connect our slicers with all of the charts. After doing our formatting, here's what our final dashboard looks like. 
+Now that the charts have been created, we'll arrange these charts onto one dashboard and add slicers. The "report connections" function will be used to connect our slicers with all of the charts. After doing our formatting, here's what our final dashboard looks like. The dasboard provides interactivity through slicers, allowing the end user to filter the data based on months, sales channel and category. 
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/3fd0de1f-d1a9-43cb-8d42-2d0ea6eb07e1)
 
-
 ## Insights
 
-Lets answer our questions one by one and look into other insights.
+Lets answer our questions one by one and look into the insights.
 
 1. Compare the sales and orders using a single chart
 2. Which month had the highest sales and count of orders?
 
-The highest amount of sales and orders occured in March, with the lowest occuring in November to December. Orders and sales generally seem to be correlated, with orders increasing as sales increase and decreasing as sales decrease. There's a continuing rise in sales from January to March, which may be due to several reasons such as seasonal trends,  sales/promotions run by the store and/or festive season. The month of March comprises of many nationwide festivals in India, which may explain why March generated the most sales and orders. There is a decline in sales and orders from April to June, with an increase in July and August, followed by a decline till December. It's important to understand as Analysts whether this is a yearly pattern and these fluctuations are seasonal fluctuations, or if there's other factors contrbuting here. Why are sales rising from Janaury to March and on a general decline from April to December? Is it increased competition? Is it product quality and negative reviews? Is it the weather? Is it due to social and political events or issues? All this is important to understand so we can understand what is happening in the business, why it could be happening and how we can help the business improve taking into account all the surrounding factors. 
+The highest amount of sales and orders occured in March, with the lowest occuring in November to December. Orders and sales generally seem to be correlated, with orders increasing as sales increase and decreasing as sales decrease. There's a continuing rise in sales from January to March, which may be due to several reasons such as seasonal trends,  sales/promotions run by the store and/or festive season. The month of March comprises of many nationwide festivals in India, which may explain why March generated the most sales and orders. There is a decline in sales and orders from April to June, with an increase in July and August, followed by a decline till December. It's important to understand as Analysts whether this is a yearly pattern which is expected, or if the pattern is different in 2022 compared to prior years. Why are sales rising from Janaury to March and on a general decline from April to December? Is it increased competition? Is it product quality and negative reviews? Is it the weather? Is it due to socio-economic and/or political events/issues? All this is important to understand so we can understand what is happening in the business, why it could be happening and how we can help the business improve taking into account all the surrounding factors. 
 
 3. Who generated the most sales, women or men?
 6. What is the relationship between age and gender based on number of purchases?
@@ -195,11 +191,11 @@ Overall across all age groups, 64% of total sales were generated by women, whils
 
 4. What are the different statuses of orders?
 
-The vast majority of orders being 92.6% were delivered with a very small number which were returned, cancelled or refunded. According to [Spotify](https://www.shopify.com/au/enterprise/blog/ecommerce-returns#:~:text=The%20average%20return%20rate%20for%20ecommerce%20is%20typically%2020%25%20to,product%20and%20its%20online%20description.) , the average return rate in Ecommerce is 20-30%, and in comparison, the return rate for Modern Traditional Store was only 3.5%. This suggests that the store is very good at describing their products and sizes ith the descriptions matching the actual product and the quality is good. 
+The vast majority of orders (92.6%) were delivered, with a very small number which were returned, cancelled or refunded. According to [Spotify](https://www.shopify.com/au/enterprise/blog/ecommerce-returns#:~:text=The%20average%20return%20rate%20for%20ecommerce%20is%20typically%2020%25%20to,product%20and%20its%20online%20description.) , the average return rate in Ecommerce is 20-30%, and in comparison, the return rate for Modern Traditional Store was only 3.5%. This quite likely suggests that the store does a great a job in delivering exactly what the customer expects (quality, size), leading to fewer returns. 
 
 5. Which are the top 10 states contributing most to sales?
 
-The top states such as Maharashtra, Karnataka and Uttar Pradesh all generated over $2M in sales, with Maharashtra in the lead. It's important to understand why the top states, are the top states. Is it because the clothing items and catered towards the demographic in these states? Is it because a promotion was run for customers in those states? As analysts, we'd do our best to study the intrinsic business factors and extrinsic factors (outside of the business) which may explain this. 
+The top states such as Maharashtra, Karnataka and Uttar Pradesh all generated over $2M in sales, with Maharashtra in the lead. It's important to understand why the top states, are the top states. Is it because the clothing items are catered towards the demographic in these states? Is it because a promotion was run for customers in those states? As analysts, we'd do our best to study the intrinsic business factors and extrinsic factors (outside of the business) which may explain why the top states are at the top. 
 
 7. Which channels are contributing the most to sales?
 
@@ -212,11 +208,11 @@ All in all, from our analysis, the key things we have learned are:
 - Amazon, Flipkart and Myntra are the top 3 sales channels
 - Sales and orders continually rise from January to March
 
-From these insights, a recommendation we can provide to executives would be to market towards women, particularly those in the 25 to 59 age group located in Maharashtra, Karnataka and Uttar Pradesh, through the top sales channels like Amazon, Flipkart and Myntra.
+From these insights, a recommendation we can provide to executives would be to market towards women, particularly those in the 25 to 59 age group located in Maharashtra, Karnataka and Uttar Pradesh, through the top sales channels like Amazon, Flipkart and Myntra, during months of increased sales from January to March. Strategies to increase sales during the lower sale months, among young adults and seniors and among the lower performing states can be brought into conversation. Discount offers, introduction of a new line of clothing catered towards young adults and the elderely and a friend referral offer, are some of the many strategies which can be utilised to increase sales in the lower performing domains. 
 
 ## Visualisation Practices
 
-In this section I wanted to share some of the best practices I adopted during the visualisation design:
+In this section I wanted to share some of the best practices I adopted during this project and the visualisations:
 
-- Keeping docoumentation outside of the dashboard and not embedding it within the dashboard. Whether it's Tableau, Excel or Power BI, many times you will see the dashboard documentation such as the data source embedded within the dashboard. This is not a best practice due to several reasons. Firstly, embedded documentation is not searchable. If we were looking for specific metrics or information, we'd have to click through each dashboard to find what we're looking for. Having the dashboard information and metrics in separate documentation makes it much easier to find the information you're after. Secondly, everytime you need to edit embedded documentation, you will have to edit the dashboard and re-publish it, increasing the likelihood of encountering bugs or glitches. Finally, embedded documentation is not part of an optimal UI/UX experience for the end user. We want to try our best to de-clutter dashboards to reduce cognitive load on the end user.
-- Decluttering techniques using design principles with an understanding of pre-attentive attributes, gastalt principles and principles of design. [This](https://womenwhocode.com/blog/talks-tech-42-principles-of-good-data-visualization) is a fantastic article explaining the design principles mentioned. However to explain briefly, attributes of a visualisation such as colours (number of colours, intensity) white space, shapes and proximity of objects are all important factors to a visualisation. Understanding how to use these correctly will ensure visualisations are clean, de-cluttered and reduce cognitive load on the end user. In our dashboard, I have used colours sparingly with less intensity. Using too much colour with too much brightness is can be over stimulating. Colours have been associated with genders across two of the charts, with orange referring to women and blue referring to men. If I were to add another chart involving gender with the same colour, the end user would not need to read the legend, they would already know which colours are associated with which gender. Alignment and whitespace, there is equal alignment between all tiles/charts and all charts are the same size, this is to maintain consistency, as anything that pops out and isn't consistent with everything else can be distracting. If one of the tiles was bigger than the other, this would stand out and act as a distraction. All gridlines have also been removed from the charts. To quickly add, before creating any visualisation it's important to keep in mind issues such as color blindness, sensitivity to colors, difficulty reading small text and other visual deficiencies. These deficineces are quite common, to give an idea, color blindess affects 1 in 12 men and 1 in 200 women, it's very likely that throughout our careers as analysts we will have to cater our visualisations for individuals with these deficiencies. 
+- Keeping documentation outside of the dashboard and not embedding it within the dashboard. Whether it's Tableau, Excel or Power BI, many times you will see the dashboard documentation such as the data source embedded within the dashboard. This is not a best practice due to several reasons. Firstly, embedded documentation is not searchable. If we were looking for specific metrics or information, we'd have to click through each dashboard to find what we're looking for. Having the dashboard information and metrics in separate documentation makes it much easier to find the information, metric and dashboards you're after. Secondly, everytime you need to edit embedded documentation, you will have to edit the dashboard and re-publish it, increasing the likelihood of encountering bugs or glitches. Finally, embedded documentation is not part of an optimal UI/UX experience for the end user. We want to try our best to de-clutter dashboards to reduce cognitive load on the end user, which is why it's best to keep documentation outside of dashboards/visualisations.
+- Decluttering techniques using design principles with an understanding of pre-attentive attributes, gastalt principles and principles of design. [This](https://womenwhocode.com/blog/talks-tech-42-principles-of-good-data-visualization) is a fantastic article explaining the design principles mentioned. However to explain briefly, attributes of a visualisation such as colours (number of colours, intensity) white space, shapes and proximity of objects are all important factors to an effective visualisation. Understanding how to use these correctly will ensure visualisations are clean, de-cluttered and reduce cognitive load on the end user. In our dashboard, I have used colours sparingly with less intensity. Using too much colour with too much brightness can be over stimulating. Colours have been associated with genders across two of the charts, with orange referring to women and blue referring to men. If I were to add another chart involving gender with the same colour, the end user would not need to read the legend, they would already know which colours are associated with which gender. Alignment and whitespace, there is equal alignment between all tiles/charts and all charts are the same size, this is to maintain consistency, as anything that pops out and isn't consistent with everything else can be distracting. If one of the tiles was bigger than the other, this would stand out and act as a distraction. All gridlines have also been removed from the charts. Adopting a minimalist approach to visualisations is the way to go. To quickly add, before creating any visualisation it's important to keep in mind issues such as color blindness, sensitivity to colors, difficulty reading small text and other visual deficiencies. These deficineces are quite common, to give an idea, color blindess affects 1 in 12 men and 1 in 200 women, it's very likely that throughout our careers as analysts we will have to cater our visualisations for individuals with these deficiencies.
