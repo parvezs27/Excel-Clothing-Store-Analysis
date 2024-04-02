@@ -23,11 +23,12 @@ We will now check over our data, this can be viewed as the analysis before the a
 
 Upon opening the dataset, we can see certain columns providing demographic data such as gender and age, as well as columns such as the ship city column providing geographic data. Additionally, we can also see columns which provide us with cusotmer purchase information such as what channels are being used to make purchases, what categories are being purchased from, which sizes and the quantities and the price of each item. Finally, there are also ID columns such as customer ID and order ID, as well as an index, which can all be viewed as keys. These keys act as unique identifiers assigned to a particular piece of information such as customer ID or order ID, which can be used to connect tables with other tables in a databse. In this dataset an index column provides a unique identifier for each row, where each row denotes the whole of a single order or a part of an order. This is an appropriate structure of the data, with each row representing the sale of each item and Order ID's separated on different rows, which allows us to analyse item sales easily. 
 
-From this data, we can already see that we have the information to help us understand the stores customer base. Having demographic, geographic, behavioural and psychographic data can help with customer profiling and in gaining a deeper understanding of the customer. This information can then be used to drive business decisions such as marketing based decisions e.g. how to market to each segement of the customer base, how much to market and inventory based decisions e.g. which products should be stocked more or less.
+From this data, we can already see that we have the information to help us understand the stores customer base. Having demographic, geographic, behavioural and psychographic data can help with customer profiling and in gaining a deeper understanding of the customer. This information can then be used to drive business decisions such as marketing based decisions e.g. how to market to each segment of the customer base, how much to market and inventory based decisions e.g. which products should be stocked more or less.
 
 Here's a snapshot of our data:
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/4bcad4ff-da8d-4333-a7fe-e023a161876f)
+*Image 1: Original Data Snapshot.*
 
 
 Lets move onto data cleaning to make sure the data is in good shape before analysis.
@@ -37,61 +38,67 @@ Data cleaning is a **crucial** process, as we want our data to be in the best po
 
 Lets start by checking for blanks, duplicates and inconsistencies within our data. To check for blanks/nulls in our dataset, we will highlight all the data by pressing Ctrl+A or double clicking the triangle on the left corner next to column A, then we'll utilise the go to special function by pressing F5, click "blanks", OK and Excel will begin scanning the dataset. We've received a "no cells were found" from Excel, which means there are no nulls in our dataset. 
 
-If in the case we did get nulls, we would have to figure how to handle these nulls. Sometimes it's just a matter of looking at the data surrounding it and filling in the null. For example, you may have a customer who's purchased two items, these will be shown in two rows, each with an order ID and customer ID value. Lets say the order ID was missing for one of the rows, by looking at the other row and seeing that the order ID is the same, then it'll be clear that the customer ID will be the same too. In other cases, you may have to decide whether to use the mean, median, mode or another imputation method for handling null values. This entirely depends on the data and context, but generally, the mean is the most common method for imputation of numeric data. However if there are outliers the mean can be heavily skewed in either direction. Where there are outliers, the median is a better option. The mode is more appropriate for categorical data and represents the most common category. These are not the only imputation methods, other methods include forward and backward fill for time series data and interpolation such as linear interpolation. It's important to liase with stakeholders such as our managers and/or executives before using any of these methods, so we can make sure we are handling these values in alignment with preferred company practices. 
+If in the case we did get nulls, we would have to figure how to handle these nulls. Sometimes it's just a matter of looking at the data surrounding it and filling in the null. For example, you may have a customer who's purchased two items, these will be shown in two rows, each with an order ID and customer ID value. Lets say the order ID was missing for one of the rows, by looking at the other row and seeing that the order ID is the same, then it'll be clear that the customer ID will be the same too. 
+
+In other cases, you may have to decide whether to use the mean, median, mode or another imputation method for handling null values. This entirely depends on the data and context, but generally, the mean is the most common method for imputation of numeric data. However, if there are outliers the mean can be heavily skewed in either direction. Where there are outliers, the median is a better option. The mode is more appropriate for categorical data and represents the most common category. These are not the only imputation methods, other methods include forward and backward fill for time series data and interpolation such as linear interpolation. It's important to liase with stakeholders such as our managers and/or executives before using any of these methods, so we can make sure we are handling these values in alignment with preferred company practices. 
 
 Moving along, we'll also have a look at our index column to see if the unique row identifiers are in sequential ascending order. To do this, we will use the formula: 
 
 IF(OR((A2+1=A3),(A2-1=A1)),"Sequential","Not Sequential")
 
-Here we're asking Excel to output "Sequential" if a cell plus 1, equals the the value of the cell below. If this condition is not met, Excel will output "Not Sequential". After running the formula, we will go to Data and add a filter to the column, so we can see the distinct values in the column. Here we can only see "Sequential", meaning that the values of the column are in ascending sequential order. If there was a "Not Sequential" shown, we would use the filter to find where this occurred and correct the issue. It's important we correct any errors with a key column as these key column are used to connect tables with one another. 
+Here we're asking Excel to output "Sequential" if a cell plus 1 equals the the value of the cell below it. If this condition is not met, Excel will output "Not Sequential". After running the formula, we will go to Data and add a filter to the column, so we can see the distinct values in the column. Here we can only see "Sequential", meaning that the values of the column are in ascending sequential order. If there was a "Not Sequential" shown, we would use the filter to find where this occurred and correct the issue. It's important we correct any errors with a key column as these key columns are used to connect tables with one another. 
+
+
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/95185f25-7e03-4046-a64b-89ac387b51d4)
-Checking index column
+*Image 2: Index Column check.*
 
 We will now go column by column checking for any issues. 
 
-Order ID and Customer ID:
+**Order ID and Customer ID:**
 The Order ID column contains numeric characters in a particular format, with 3 numeric characters followed by a dash and 7 numeric characters, followed by a dash and 7 numeric characters again. Upon adding a filter and scanning through the disctinct values in the filter, all the order ID's seem to follow the same formatting with no abnormalities sticking out. Similarly with the customer ID column, using the same process of running a filter and scanning through, no issues or abnormalities standout.
 
-Gender:
-Already on first glance, we can see that there's "Women", "Men" and "W", indicating that genders have been denoted with both the word and the first letter of the word for the gender. We want to denote using just one method, here we'll denote the genders using the words "Men" and "Women" and replace any "W" and "M" with these. To do that, we will filter for "M" and "W" and run the find and replace function and replace these with the appropriate the gender.
+**Gender:**
+Already on first glance, we can see that there's "Women", "Men" and "W", indicating that genders have been denoted with both the word and the first letter of the word for the gender. We want to denote using just one method, here we'll denote the genders using the words "Men" and "Women" and replace any "M" and "W" with the words. To do that, we will filter for "M" and "W" and run the find and replace function and replace these with the appropriate gender.
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/c6c52777-20c4-42a7-956b-37677bd738ec)
-Before
+*Image 3: Gender column before cleaning.*
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/a0f7f1e0-30fd-4c4e-915b-776d542e6eed)
-After running find and replace
+*Image 4: Gender column after cleaning.*
 
-Age:
-Using the filter, we will check for any abnormal values in the age column. As an example, if the value 6 was found, we would know for certain that this is an abnormal vlaue because it's extremely unlikely a 6 year old would be able to sign up for a website in the first place, and then place an order. 18 years of age is the minimum age to purchase on websites as one is entering into a contract. Another abnormal value could be over the age of 90, whilst it may be entirely possible for someone over the age of 90 to make a purchase, the likelhihood is statistically low. The older you get after a certain age, the less likely you are to make an online purchase. [Here](https://www.statista.com/statistics/469184/us-digital-buyer-share-age-group/) is a graph showing the distribution of digital buyers in the United States as of February 2020, showcasing the decreasing number of buyers with age. In our dataset the age range is 18-78, which can be said is a normal range.
+**Age:**
+Using the filter, we will check for any abnormal values in the age column. As an example, if the value "6" was found, we would know for certain that this is an abnormal vlaue because it's extremely unlikely a 6 year old would be able to sign up for a website in the first place, and then place an order. 18 years of age is the minimum age to purchase on websites as one is entering into a contract. 
 
-Date:
-The date column is in the correct data type which is "date". Running through the filter, we can see the months from January to December in 2022, with no misspelled repeats or any other abnormalities. 
+Another abnormal value could be over the age of 90, whilst it may be entirely possible for someone over the age of 90 to make a purchase, the likelhihood is statistically low. The older you get after a certain age, the less likely you are to make an online purchase. [Here](https://www.statista.com/statistics/469184/us-digital-buyer-share-age-group/) is a graph showing the distribution of digital buyers in the United States as of February 2020, showcasing the decreasing number of buyers with age. In our dataset the age range is 18-78, which can be said is a normal range when comparing to the graph above.
 
-Status:
+**Date:**
+The date column is in the correct data type which is "date". Running through the filter, we can see the months from January to December in 2022 with no abnormalities to be seen.
+
+**Status:**
 Using our filter, we can see "Cancelled", "Delivered", "Refunded" and "Returned", nothing abnormal to be seen here.
 
-Channel:
+**Channel:**
 Using our filter, we can see the list of channels, nothing abnormal noted here.
 
-SKU:
+**SKU:**
 Using our filter,, we can see the SKU ends with the size of the item such as XXL. This is something we should keep in mind. If we run across a SKU without a size at the end, this may need to be corrected. 
 
-Category and size:
+**Category and size:**
 Using the filter, we can see no abnormalities in these columns.
 
-Quantity:
+**Quantity:**
 Using the filter, we can see numeric values and also text values, such as "1" and "One", "2" and "Two". We will utilise the same process as we did previously with the gender column and run the find and replace function to replace the text values with numeric values. 
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/f07b7fbc-2994-4ff1-bbce-6fa6badbe187)
-Before 
+*Image 5: Quantity column before cleaning.*
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/8a813941-1c97-4dce-90df-11daabe1ece2)
-After running find and replace
+*Image 6: Quantity column after cleaning.*
 
-Currency:
+**Currency:**
 Using the filter, we can see "INR" (Indian Rupees) is the only text value used throughout the column. Since we already know our store is in India and accepts payments in INR, this column seems like an unncessary use of space and could be removed. However, it's important to consult with the relevant stakeholders before doing so. In our analysis we'll leave the column as is. 
 
-Amount:
+**Amount:**
 Using the filter, we can see no abnormal values. No values seem very low or very high nor look like they wouldn't fall within the normal range. It would be useful to have a list of the item prices which we can refer to and see the item price range. If a value was to fall outside this range, we know there would be an error somewhere. 
 
 Ship City, Ship State and Ship Postal Code:
