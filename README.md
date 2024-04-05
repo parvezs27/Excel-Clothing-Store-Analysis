@@ -116,7 +116,7 @@ Using the filter, we cannot see any abnormalities in these columns.
 **Ship Country:**
 This is another column which could be deleted to clear space, since we already know that the data is looking at national orders in India only and not international orders.
 
-## Data Preparation
+### Data Preparation
 
 We will now perform a couple of calculations to help us with answering the questions. 
 
