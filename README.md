@@ -150,6 +150,7 @@ One thing we can also do, is to paste the columns with formula's such as Age Gro
 We will be using Pivot tables for our analysis. Pivot tables are frequently used in Excel based analyses as they allow large datasets to be summarised quickly and easily. To create a pivot table, we will go to the insert tab and click pivot table, select the data range, click "add this to data model" (more on this in a bit) and click OK. We'll now utilise our PivotTable fields to create the charts we need to address the questions. 
 
 **1. Compare the monthly sales and orders using a single chart
+
 2. Which month had the highest sales and count of orders?**
 
 We'll start by dragging our month, amount and order ID fields in the appropriate rows and value fields and turn off the grand totals, as below.
