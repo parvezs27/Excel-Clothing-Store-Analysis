@@ -261,7 +261,7 @@ From these insights, a recommendation we can provide to executives would be to m
 
 Strategies to increase sales during the lower sales months, among young adults and seniors and among the lower performing states can be brought into conversation. Discount offers, introduction of a new line of clothing catered towards young adults and the elderly and a friend referral offer, are some of the many strategies which can be utilised to increase sales in the lower performing domains. 
 
-## Visualisation Practices
+# Visualisation Practices
 
 In this section I wanted to share some of the best practices I adopted for this project and the visualisations:
 
