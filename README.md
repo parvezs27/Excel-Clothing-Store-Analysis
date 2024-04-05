@@ -28,6 +28,7 @@ From this data, we can already see that we have the information to help us under
 Here's a snapshot of our data:
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/4bcad4ff-da8d-4333-a7fe-e023a161876f)
+
 *Image 1: Original Data Snapshot.*
 
 
@@ -50,6 +51,7 @@ Here we're asking Excel to output "Sequential" if a cell plus 1 equals the value
 
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/95185f25-7e03-4046-a64b-89ac387b51d4)
+
 *Image 2: Index Column check.*
 
 We will now go column by column checking for any issues. 
@@ -63,9 +65,11 @@ The Order ID column contains numeric characters in a particular format, with 3 n
 Already on first glance, we can see that there's "Women", "Men" and "W", indicating that genders have been denoted with both the word and the first letter of the word for the gender. We want to denote using just one method, here we'll denote the genders using the words "Men" and "Women" and replace any "M" and "W" with the words. To do that, we will filter for "M" and "W" and run the find and replace function and replace these with the appropriate gender.
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/c6c52777-20c4-42a7-956b-37677bd738ec)
+
 *Image 3: Gender column before cleaning.*
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/a0f7f1e0-30fd-4c4e-915b-776d542e6eed)
+
 *Image 4: Gender column after cleaning.*
 
 **Age:**
@@ -92,9 +96,11 @@ Using the filter, we can see no abnormalities in these columns.
 Using the filter, we can see numeric values and also text values, such as "1" and "One", "2" and "Two". We will utilise the same process as we did previously with the gender column and run the find and replace function to replace the text values with numeric values. 
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/f07b7fbc-2994-4ff1-bbce-6fa6badbe187)
+
 *Image 5: Quantity column before cleaning.*
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/8a813941-1c97-4dce-90df-11daabe1ece2)
+
 *Image 6: Quantity column after cleaning.*
 
 **Currency:**
@@ -124,6 +130,7 @@ This formula instructs excel to output "Young Adult" if the age value is equal t
 Below is the result of our formula. 
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/135be8ce-96f4-45a4-9442-88667d3538df)
+
 *Image 7: Creating age groups/brackets*
 
 Now we'll extract the Month from the Date column, so we can answer question 2 which asks us to identify the month with the highest sales and orders. If we were to convert the dataset into a table and insert a slicer, we will only be able to filter by individual dates and not months. To be able to filter by months, we'll need to extract the month from the date column into another column. To do that, we will use the TEXT function which is used to convert numbers to text. We will use the formula below.
@@ -133,6 +140,7 @@ Now we'll extract the Month from the Date column, so we can answer question 2 wh
 This formula instructs excel to extract the numeric value of the month from the cell F2 into text form. Using "mmm" will result in "Dec" and using "mmmm" will give you the full form as "December". Below is the result of our formula:
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/f424bef8-867b-48b2-b742-1d384cef0809)
+
 *Image 8: Extraction of month from Date column.*
 
 One thing we can also do, is to paste the columns with formula's such as Age Group and Month as values. This way you remove the formulas from the sheet and improve processing speed. The formulas will be in our documentation for this project so we can safely remove them from the sheet if we desire to.
@@ -146,6 +154,7 @@ We will be using Pivot tables for our analysis. Pivot tables are frequently used
 We'll start by dragging our month, amount and order ID fields in the appropriate rows and value fields and turn off the grand totals, as below.
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/509944ae-ef88-408b-8cc7-f0e31591700f)
+
 *Image 9: Creating Pivot Table for monthly data with count*
 
 We can see the amount of sales and the number of Order ID's per month which Excel has counted, however, this count of order ID's does not equate to the count of unique orders per month. Due to the structure of our data, Excel count's every time an Order ID is mentioned in the dataset, so if an order ID is mentioned 3 times, it will be counted as 3 different orders. 
@@ -153,6 +162,7 @@ We can see the amount of sales and the number of Order ID's per month which Exce
 Instead of count, we have to use count distinct which will only count each order ID once. This was why we selected the "add this to data model" option, which allows us to use the count distinct function. Below are the results after running the count distinct function. We can see the difference is more than 200 for the month of January, this is why we have to be careful and make sure we're using the correct count function.
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/12460746-d82f-4d63-bb44-89da9d263775)
+
 *Image 10: Creating Pivot Table for monthly data with count distinct*
 
 Now we'll create a single chart which visualises monthly sales and orders using the PivotChart function. Since we have two measures, with the count of order ID's in the thousands and the sum of amounts into the millions, we'll need to create a dual axis chart.
@@ -160,6 +170,7 @@ Now we'll create a single chart which visualises monthly sales and orders using 
 Here's what our final chart looks like after formatting:
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/eff02cc0-3ce1-43a7-b217-e6cfee979846)
+
 *Image 11: Column Chart of sales and orders by month*
 
 **3. Who generated the most sales, men or women?**
@@ -167,14 +178,16 @@ Here's what our final chart looks like after formatting:
 Here we can utilise a couple of different charts, we can use a bar chart as before, with horizontal or vertical bars. Or, we can use a pie chart. Generally, pie charts are frowned upon and not considered best practice, as it can be difficult to interpret and distinguish the difference between similar sized slices. However, to provide the audience with a quick general sense of the part to whole relationship of your data where you don't have many precise slices, pie charts are a good option. Since we only have men and women we are comparing, we'll utilise a pie chart. Below is our final chart. 
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/d934d65b-db1b-4e22-8eea-a71c9a5ea30a)
-*Image 11: Pie Chart of Men vs Women based on revenue generated*
+
+*Image 12: Pie Chart of Men vs Women based on revenue generated*
 
 **4. What are the different statuses of orders?**
 
 For this question we will use a horizontal bar chart, we can also utilise a pie chart, however, the difference in some of the statuses are 1%, which will give us thin slices cluttered together, a bar chart will separate these out in a easy to interpret manner. Since we want to see the percent of the grand total, we have to go to value field settings and change "choose values as" to % of grand total. Below is our final chart.
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/322ae808-05b0-45fd-9b7d-8562ba24e3af)
-*Image 12: Bar Chart of order status*
+
+*Image 13: Bar Chart of order status*
 
 **5. Which are the top 10 states contributing most to sales?**
 
@@ -182,14 +195,16 @@ Here we'll use a horizontal bar chart again. Horizontal bar charts are one of th
 Here's our chart below after doing our formatting:
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/90d8c50d-f9c7-4b76-9952-32cb76784985)
-*Image 13: Bar Chart of top 10 states by sales*
+
+*Image 14: Bar Chart of top 10 states by sales*
 
 **6. What is the relationship between age and gender based on number of purchases?**
 
 Here we're looking at the contribution towards the total number of purchases, segmented by gender and age. We'll utilise a column chart to show the contribution towards sales by each gender in the young adult, adult and senior age groups. Below is our final chart after formatting:
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/0f00967e-35b5-4498-9aaa-493f86cffa64)
-*Image 14: Column Chart of orders segmented by age and gender*
+
+*Image 15: Column Chart of orders segmented by age and gender*
 
 **7. Which channel is contributing to maximum sales?**
 
@@ -197,12 +212,13 @@ Here we'll create another horizontal bar chart to compare the sales generated by
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/edbe927d-b67d-4a7e-a5d0-2ad5e771f733)
 
-*Image 15: Bar Chart of sales generated by sales channel*
+*Image 17: Bar Chart of sales generated by sales channel*
    
 Now that the charts have been created, we'll arrange these charts onto one dashboard and add slicers. The "report connections" function will be used to connect our slicers with all of the charts. After doing our formatting, here's what our final dashboard looks like. The dashboard provides interactivity through slicers, allowing the end user to filter the data based on months, sales channel and category. 
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/3fd0de1f-d1a9-43cb-8d42-2d0ea6eb07e1)
-*Image 16: Annual Sales Report Dashboard 22*
+
+*Image 18: Annual Sales Report Dashboard 22*
 
 ## Insights
 
