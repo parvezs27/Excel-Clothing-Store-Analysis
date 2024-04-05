@@ -218,7 +218,7 @@ Now that the charts have been created, we'll arrange these charts onto one dashb
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/3fd0de1f-d1a9-43cb-8d42-2d0ea6eb07e1)
 
-*Image 17: Annual Sales Report Dashboard 22.*
+*Image 17: Annual Sales Report Dashboard 2022.*
 
 ## Insights
 
