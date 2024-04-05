@@ -56,8 +56,6 @@ Here we're asking Excel to output "Sequential" if a cell plus 1 equals the value
 
 We will now go column by column checking for any issues. 
 
-## Data Cleaning
-
 **Order ID and Customer ID:**
 The Order ID column contains numeric characters in a particular format, with 3 numeric characters followed by a dash and 7 numeric characters, followed by a dash and 7 numeric characters again. Upon adding a filter and scanning through the distinct values in the filter, all the order ID's seem to follow the same formatting with no abnormalities sticking out. Similarly with the customer ID column, using the same process of running a filter and scanning through, no issues or abnormalities standout.
 
