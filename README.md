@@ -35,6 +35,9 @@ Here's a snapshot of our data:
 Lets move onto data cleaning to make sure the data is in good shape before analysis.
 
 ## Data Cleaning and Preparation
+
+### Data Cleaning
+
 Data cleaning is a **crucial** process, as we want our data to be in the best possible state, free from as much "rogue data" as possible. Rogue data being, incomplete, inaccurate, irrelevant, corrupt or incorrectly formatted data. Having accurate, complete, relevant and correctly formatted data will make sure our analysis is reliable and will make other tasks easier such as future analyses.
 
 Lets start by checking for blanks, duplicates and inconsistencies within our data. To check for blanks/nulls in our dataset, we will highlight all the data by pressing Ctrl+A or double clicking the triangle on the left corner next to column A, then we'll utilise the go to special function by pressing F5, click "blanks", OK and Excel will begin scanning the dataset. We've received a "no cells were found" from Excel, which means there are no nulls in our dataset. 
