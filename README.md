@@ -10,7 +10,7 @@ Modern Traditional Clothing Store is an online clothing store based in India, wh
 6. What is the relationship between age and gender based on number of purchases?
 7. Which channels are contributing the most to sales?
 
-The Data Engineers for the store have provided us with the dataset for 2022 in the form of an Excel file, which we'll be using for our analysis.
+The Data Engineers for the store have provided us with the dataset for 2022 in the form of an Excel file, which we'll be using for our analysis. The dataset can be found here: [modern_traditional_data](/modern/).
 
 We have been given the dataset and the questions we need to answer, however, a lot of the time in the real world this will not be the case. Data Analysts will be given a business problem and it will be upto us to decide which data we need, where to source the data from e.g. internally from within the company database or from an external source and which questions should be addressed to help solve the business problem. In this case, we haven't been given mock ups or example dashboards, however, the executives have mentioned that we're free to design the dashboard how we would like, as long as the information addresses the questions and is clearly and easily conveyed. 
 
