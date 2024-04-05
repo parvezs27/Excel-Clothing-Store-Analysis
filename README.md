@@ -179,7 +179,7 @@ Here we can utilise a couple of different charts, we can use a bar chart as befo
 
 ![image](https://github.com/parvezs27/Excel-Clothing-Store-Analysis/assets/107979122/d934d65b-db1b-4e22-8eea-a71c9a5ea30a)
 
-*Image 12: Pie Chart of Men vs Women based on revenue generated*
+*Image 12: Pie Chart of Men vs Women based on revenue generated.*
 
 **4. What are the different statuses of orders?**
 
